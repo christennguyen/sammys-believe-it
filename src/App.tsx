@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import "./App.css";
+import HeaderBar from "./components/HeaderBar/HeaderBar";
+import Overview from "./components/Overview/Overview";
+import Footer from "./components/Footer/Footer";
+import PhotoSection from "./components/PhotosSection/PhotoSection";
+import CastSection from "./components/CastSection/CastSection";
+import StorylineSection from "./components/StorylineSection/StorylineSection";
+
+const StyledMainSection = styled.div`
+  padding: 20px 40px;
+`;
+
+const StyledInfoCard = styled.div`
+  border: 1px solid #f5c518;
+  border-radius: 4px;
+  margin: 10px 0 10px 0;
+  padding: 4px;
+`;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <HeaderBar />
+        <Overview />
+        <StyledMainSection>
+          <StyledInfoCard>
+            <b>Won 2 Oscars</b> 12 wins & 7 nominations total
+          </StyledInfoCard>
+          <PhotoSection />
+          <CastSection />
+          <StorylineSection />
+        </StyledMainSection>
+
+        <Footer />
+      </div>
     </div>
   );
 }
