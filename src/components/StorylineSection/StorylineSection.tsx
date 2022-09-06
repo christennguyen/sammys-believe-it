@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { SectionCard } from "../../styles";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
 const StorylineSection = () => {
   return (
-    <div>
+    <SectionCard>
       <SectionHeader text="Storyline" />
       <div>
         Sam and Christen meet on a dating app and finally meet in September of
@@ -13,7 +14,7 @@ const StorylineSection = () => {
         that, they begin to learn and enjoy the depths of each partner's
         character, motives, and their joys and fears in life and fall in love.
       </div>
-    </div>
+    </SectionCard>
   );
 };
 

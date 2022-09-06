@@ -3,8 +3,7 @@ import styled from "styled-components";
 const StyledHeader = styled.div`
   display: flex;
   flex-direction: row;
-  border-left: 6px solid #f5c518;
-  border-radius: 2px;
+  margin-bottom: 20px;
 `;
 
 const StyledTitle = styled.div`
@@ -12,6 +11,11 @@ const StyledTitle = styled.div`
   font-weight: bold;
 `;
 
+const StyledPill = styled.div`
+  border: 2px solid #f5c518;
+  border-radius: 10px;
+  margin-right: 8px;
+`;
 interface ISectionHeader {
   text: string;
 }
@@ -19,6 +23,7 @@ interface ISectionHeader {
 const SectionHeader: React.FC<ISectionHeader> = ({ text }) => {
   return (
     <StyledHeader>
+      <StyledPill />
       <StyledTitle>{text}</StyledTitle>
     </StyledHeader>
   );

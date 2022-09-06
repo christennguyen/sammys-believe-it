@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { SectionCard } from "../../styles";
 import SectionHeader from "../SectionHeader/SectionHeader";
 
 const StyledHeader = styled.div`
@@ -34,13 +35,13 @@ const CastInfo: React.FC<ICastInfoType> = ({ imageUrl, name, role }) => {
 
 const CastSection = () => {
   return (
-    <div>
+    <SectionCard>
       <SectionHeader text="Top Cast" />
       <StyledRow>
         <CastInfo imageUrl="poop" name="Sam Mathison" role="Boyf" />
         <CastInfo imageUrl="poop" name="Christen Nguyen" role="Girlf" />
       </StyledRow>
-    </div>
+    </SectionCard>
   );
 };
 
