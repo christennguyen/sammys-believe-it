@@ -7,7 +7,6 @@ const StyledContainer = styled.div`
   height: 250px;
   position: absolute;
   width: 100%;
-  bottom: 0px;
 `;
 
 const StyledTextContainer = styled.div`
