@@ -7,6 +7,7 @@ import PhotoSection from "./components/PhotosSection/PhotoSection";
 import CastSection from "./components/CastSection/CastSection";
 import StorylineSection from "./components/StorylineSection/StorylineSection";
 import AwardsCard from "./components/AwardsCard/AwardsCard";
+import DidYouKnow from "./components/DidYouKnow/DidYouKnow";
 
 const StyledContent = styled.div`
   width: 845px;
@@ -39,6 +40,7 @@ function App() {
               <PhotoSection />
               <CastSection />
               <StorylineSection />
+              <DidYouKnow />
             </StyledSubContent>
           </StyledContent>
         </StyledMainSection>

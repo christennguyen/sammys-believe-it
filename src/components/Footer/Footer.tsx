@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
-  background-color: black;
+  background-color: #121212;
   color: white;
   text-align: center;
   height: 250px;
@@ -16,12 +16,17 @@ const StyledTextContainer = styled.div`
   height: 100%;
 `;
 
+const StyledCopyright = styled.div`
+  margin-top: 12px;
+  color: #bbbbbb;
+  font-size: 12px;
+`;
 const Footer = () => {
   return (
     <StyledContainer>
       <StyledTextContainer>
         A Bozos Company
-        <div>© 2022 by Sammy's Believe It or Not</div>
+        <StyledCopyright>© 2022 by Sammy's Believe It or Not</StyledCopyright>
       </StyledTextContainer>
     </StyledContainer>
   );

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import star from "../../../images/icons/star.svg";
 import starOutline from "../../../images/icons/star-outline.svg";
@@ -24,6 +25,12 @@ const StyledRatingContent = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 6px;
+
+  :hover {
+    cursor: pointer;
+    background-color: #363636;
+    border-radius: 4px;
+  }
 `;
 
 const StyledYourRatingContent = styled.div`
@@ -31,6 +38,14 @@ const StyledYourRatingContent = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 12px;
+
+  :hover {
+    cursor: pointer;
+    background-color: #363636;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 3px;
+  }
 `;
 
 const StyledTrendingContent = styled.div`
@@ -38,6 +53,14 @@ const StyledTrendingContent = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+
+  :hover {
+    cursor: pointer;
+    background-color: #363636;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 2px;
+  }
 `;
 
 const StyledRating = styled.div`
@@ -72,7 +95,13 @@ const StyledRatingColumn = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const RatingsBlock = () => {
+  const [showRating, setShowRating] = useState(false);
+
+  const toggleShowRating = () => {
+    setShowRating(!showRating);
+  };
   return (
     <StyledRatingsContainer>
       <StyledRatingBlock>
@@ -95,14 +124,28 @@ const RatingsBlock = () => {
       </StyledRatingBlock>
       <StyledRatingBlock>
         <div>YOUR RATING</div>
-        <StyledYourRatingContent>
-          <img
-            src={starOutline}
-            alt="star outline"
-            height="24px"
-            style={{ marginRight: "8px" }}
-          />
-          <StyledRateText>Rate</StyledRateText>
+        <StyledYourRatingContent onClick={toggleShowRating}>
+          {showRating ? (
+            <>
+              <img
+                src={star}
+                alt="star"
+                height="24px"
+                style={{ marginRight: "8px" }}
+              />
+              <StyledRating>10</StyledRating>
+            </>
+          ) : (
+            <>
+              <img
+                src={starOutline}
+                alt="star outline"
+                height="24px"
+                style={{ marginRight: "8px" }}
+              />
+              <StyledRateText>Rate</StyledRateText>
+            </>
+          )}
         </StyledYourRatingContent>
       </StyledRatingBlock>
       <StyledRatingBlock>

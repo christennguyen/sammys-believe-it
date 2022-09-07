@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import arrowIcon from "../../images/icons/arrowRight.svg";
 
+const StyledMainText = styled.div`
+  font-weight: bold;
+  margin-right: 10px;
+`;
+
 const StyledInfoCard = styled.div`
   border: 1px solid #f5c518;
   border-radius: 4px;
@@ -9,6 +14,10 @@ const StyledInfoCard = styled.div`
   display: flex;
   position: relative;
   cursor: pointer;
+
+  :hover ${StyledMainText} {
+    color: grey;
+  }
 `;
 
 const StyledTrapezoid = styled.div`
@@ -24,19 +33,11 @@ const StyledTrapezoid = styled.div`
 `;
 
 const StyledText = styled.div`
-  margin-left: 33px;
+  margin-left: 38px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-`;
-
-const StyledMainText = styled.div`
-  font-weight: bold;
-  margin-right: 10px;
-  :hover {
-    color: grey;
-  }
 `;
 
 const StyledTextContainer = styled.div`

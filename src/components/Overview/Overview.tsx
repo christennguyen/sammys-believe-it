@@ -40,6 +40,11 @@ const StyledGenrePill = styled.div`
   padding: 6px 12px;
   margin-right: 8px;
   font-size: 14px;
+  cursor: pointer;
+
+  :hover {
+    background-color: #363636;
+  }
 `;
 
 const StyledGenreContainer = styled.div`
