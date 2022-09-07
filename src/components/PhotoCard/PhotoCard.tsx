@@ -12,6 +12,10 @@ const StyledContainer = styled.div`
   cursor: pointer;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+
+  :hover {
+    background-color: #484848;
+  }
 `;
 
 interface IPhotoCard {
@@ -32,7 +36,7 @@ const PhotoCard: React.FC<IPhotoCard> = ({ icon, text }) => {
   return (
     <StyledContainer>
       <StyledIconContainer>
-        <img src={icon} alt="photo/video" height="32px" />
+        <img src={icon} alt="icon" height="32px" />
       </StyledIconContainer>
       <StyledText>{text}</StyledText>
     </StyledContainer>
