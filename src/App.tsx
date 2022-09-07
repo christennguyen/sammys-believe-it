@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import PhotoSection from "./components/PhotosSection/PhotoSection";
 import CastSection from "./components/CastSection/CastSection";
 import StorylineSection from "./components/StorylineSection/StorylineSection";
+import AwardsCard from "./components/AwardsCard/AwardsCard";
 
 const StyledContent = styled.div`
   width: 845px;
@@ -21,13 +22,6 @@ const StyledMainSection = styled.div`
   justify-content: center;
 `;
 
-const StyledInfoCard = styled.div`
-  border: 1px solid #f5c518;
-  border-radius: 4px;
-  margin: 10px 0 10px 0;
-  padding: 16px;
-`;
-
 const StyledMain = styled.div`
   position: relative;
 `;
@@ -41,9 +35,7 @@ function App() {
         <StyledMainSection>
           <StyledContent>
             <StyledSubContent>
-              <StyledInfoCard>
-                <b>Won 2 Oscars</b> 12 wins & 7 nominations total
-              </StyledInfoCard>
+              <AwardsCard />
               <PhotoSection />
               <CastSection />
               <StorylineSection />
