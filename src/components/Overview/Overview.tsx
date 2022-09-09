@@ -64,7 +64,7 @@ const StyledGenreContainer = styled.div`
     flex-wrap: wrap;
 
     * {
-      margin-top: 10px;
+      margin-top: 8px;
     }
   }
 `;
