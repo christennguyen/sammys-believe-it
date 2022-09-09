@@ -11,6 +11,10 @@ const StyledCastInfoContainer = styled.div`
   @media only screen and (max-width: 860px) {
     flex-direction: column;
   }
+
+  @media only screen and (max-width: 375px) {
+    flex-direction: row;
+  }
 `;
 
 const StyledBlock = styled.div`
@@ -39,6 +43,10 @@ const StyledHeadshot = styled.img`
   @media only screen and (max-width: 860px) {
     height: 159px;
   }
+
+  @media only screen and (max-width: 375px) {
+    height: 96px;
+  }
 `;
 
 const StyledCastText = styled.div`
@@ -49,6 +57,12 @@ const StyledCastText = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 8px;
+  }
+
+  @media only screen and (max-width: 375px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 0px;
   }
 `;
 
@@ -63,6 +77,7 @@ const StyledActorName = styled.div`
 const StyledRole = styled.div`
   color: #808080;
   cursor: pointer;
+  margin-top: 4px;
   :hover {
     text-decoration: underline;
   }
