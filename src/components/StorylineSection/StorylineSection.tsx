@@ -14,7 +14,7 @@ const StorylineSection = () => {
       <br />
       In their year of dating, the two travel all over the US. They hit major
       cities such as New York, San Diego, Nashville, and Portland. There they
-      experience a variety of terrain from snow to storm to thick, humid heat.
+      experience a variety of terrain from snow to storm, to thick, humid heat.
       <br />
       <br />
       Where will Sam and Christen's adventures take them in year two?

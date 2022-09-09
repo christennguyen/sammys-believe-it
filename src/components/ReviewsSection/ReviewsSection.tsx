@@ -117,8 +117,8 @@ const ReviewsSection = () => {
         absolute favorite character! He's so kind and patient with Christen.
         <br />
         <br />I loved all the action but appreciated the balance of serious and
-        meaningful dialog while being hilarious and light-hearted! Perfect film,
-        no notes!
+        meaningful dialogue while being hilarious and light-hearted! Perfect
+        film, no notes!
         <StyledHelpfulContainer>
           <div onClick={markHelpful}>
             <StyledThumbs src={thumbsUpIcon} alt="thumbs up" />

@@ -41,6 +41,7 @@ const StyledMain = styled.div`
 
   @media only screen and (max-width: 860px) {
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 `;
 
