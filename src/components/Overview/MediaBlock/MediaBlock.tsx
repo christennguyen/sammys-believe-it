@@ -17,7 +17,7 @@ const StyledImagesContainer = styled.div`
   }
 
   @media only screen and (max-width: 390px) {
-    margin: 18px -32px;
+    margin: 18px -16px;
   }
 `;
 

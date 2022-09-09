@@ -73,6 +73,10 @@ const StyledDivider = styled.div`
   border-bottom: 1px solid grey;
   width: 500px;
   margin: 14px 0;
+
+  @media only screen and (max-width: 860px) {
+    width: 100%;
+  }
 `;
 
 const StyledActorLinks = styled.div`

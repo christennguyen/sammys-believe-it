@@ -38,10 +38,6 @@ const StyledMainSection = styled.div`
 
 const StyledMain = styled.div`
   position: relative;
-
-  @media only screen and (max-width: 860px) {
-    -webkit-overflow-scrolling: touch;
-  }
 `;
 
 function App() {
@@ -62,7 +58,6 @@ function App() {
             </StyledSubContent>
           </StyledContent>
         </StyledMainSection>
-
         <Footer />
       </StyledMain>
     </div>
