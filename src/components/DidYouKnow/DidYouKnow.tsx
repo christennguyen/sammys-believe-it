@@ -22,8 +22,12 @@ const DidYouKnow = () => {
     <SectionCard>
       <>
         <SectionHeader text="Did You Know" />
-        {data.map((content) => (
-          <TextCard title={content.title} text={content.text} />
+        {data.map((content, index) => (
+          <TextCard
+            key={`fact-card-${index}`}
+            title={content.title}
+            text={content.text}
+          />
         ))}
       </>
     </SectionCard>
