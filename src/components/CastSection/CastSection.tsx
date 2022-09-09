@@ -19,6 +19,11 @@ const StyledBlock = styled.div`
 
   @media only screen and (max-width: 860px) {
     justify-content: flex-start;
+    flex-wrap: wrap;
+
+    * {
+      margin-top: 8px;
+    }
   }
 `;
 

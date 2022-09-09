@@ -43,6 +43,10 @@ const StyledNextButton = styled.div`
   @media only screen and (max-width: 860px) {
     right: -21px;
   }
+
+  @media only screen and (max-width: 860px) {
+    right: -14px;
+  }
 `;
 
 const StyledRow = styled.div`

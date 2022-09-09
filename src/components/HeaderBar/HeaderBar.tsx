@@ -8,6 +8,10 @@ import downIcon from "../../images/icons/downArrow.svg";
 const StyledHeader = styled.div`
   width: 850px;
   padding: 12px;
+
+  @media only screen and (max-width: 860px) {
+    width: 100%;
+  }
 `;
 
 const StyledHeaderContents = styled.div`
