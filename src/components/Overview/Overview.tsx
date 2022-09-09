@@ -68,7 +68,6 @@ const StyledGenreContainer = styled.div`
     }
   }
 `;
-const StyledInfoContainer = styled.div``;
 
 const StyledDivider = styled.div`
   border-bottom: 1px solid grey;
