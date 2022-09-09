@@ -11,11 +11,19 @@ import DidYouKnow from "./components/DidYouKnow/DidYouKnow";
 
 const StyledContent = styled.div`
   width: 845px;
+
+  @media only screen and (max-width: 860px) {
+    width: calc(100vw - 48px);
+  }
 `;
 
 const StyledSubContent = styled.div`
   width: 60%;
   margin-top: 20px;
+
+  @media only screen and (max-width: 860px) {
+    width: 100%;
+  }
 `;
 const StyledMainSection = styled.div`
   width: 100%;
@@ -25,6 +33,10 @@ const StyledMainSection = styled.div`
 
 const StyledMain = styled.div`
   position: relative;
+
+  @media only screen and (max-width: 860px) {
+    overflow-x: hidden;
+  }
 `;
 
 function App() {

@@ -8,6 +8,13 @@ const StyledRatingsContainer = styled.div`
   display: flex;
   align-items: flex-start;
   padding-top: 30px;
+
+  @media only screen and (max-width: 860px) {
+    padding-top: 0px;
+    width: 273px;
+    justify-content: space-between;
+    height: 28px;
+  }
 `;
 
 const StyledRatingBlock = styled.div`
@@ -31,6 +38,15 @@ const StyledRatingContent = styled.div`
     background-color: #363636;
     border-radius: 4px;
   }
+
+  @media only screen and (max-width: 860px) {
+    margin-top: 2px;
+
+    :hover {
+      margin-top: -4px;
+      padding: 8px;
+    }
+  }
 `;
 
 const StyledYourRatingContent = styled.div`
@@ -45,6 +61,14 @@ const StyledYourRatingContent = styled.div`
     border-radius: 4px;
     padding: 8px;
     margin-top: 3px;
+  }
+
+  @media only screen and (max-width: 860px) {
+    margin-top: 2px;
+
+    :hover {
+      margin-top: -4px;
+    }
   }
 `;
 
@@ -61,18 +85,35 @@ const StyledTrendingContent = styled.div`
     padding: 5px;
     margin-top: 2px;
   }
+
+  @media only screen and (max-width: 860px) {
+    margin-top: 0px;
+
+    :hover {
+      margin-top: -3px;
+      padding: 6.5px;
+    }
+  }
 `;
 
 const StyledRating = styled.div`
   color: white;
   font-size: 20px;
   font-weight: bold;
+
+  @media only screen and (max-width: 860px) {
+    font-size: 16px;
+  }
 `;
 
 const StyledRateText = styled.div`
   color: #5799ef;
   font-size: 20px;
   font-weight: bold;
+
+  @media only screen and (max-width: 860px) {
+    font-size: 16px;
+  }
 `;
 
 const StyledDivisor = styled.div`
@@ -89,13 +130,43 @@ const StyledQuantity = styled.div`
   color: #c4c4c4;
   font-size: 12px;
   font-weight: normal;
+
+  @media only screen and (max-width: 860px) {
+    font-size: 16px;
+  }
 `;
 
 const StyledRatingColumn = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 860px) {
+    flex-direction: row;
+    align-items: center;
+  }
 `;
 
+const StyledRatingsHeader = styled.div`
+  @media only screen and (max-width: 860px) {
+    display: none;
+  }
+`;
+
+const StyledStarIcon = styled.img`
+  height: 24px;
+
+  @media only screen and (max-width: 860px) {
+    height: 17px;
+  }
+`;
+
+const StyledTrendingIcon = styled.img`
+  height: 30px;
+
+  @media only screen and (max-width: 860px) {
+    height: 22px;
+  }
+`;
 const RatingsBlock = () => {
   const [showRating, setShowRating] = useState(false);
 
@@ -105,12 +176,11 @@ const RatingsBlock = () => {
   return (
     <StyledRatingsContainer>
       <StyledRatingBlock>
-        <div>IMDb RATING</div>
+        <StyledRatingsHeader>IMDb RATING</StyledRatingsHeader>
         <StyledRatingContent>
-          <img
+          <StyledStarIcon
             src={star}
             alt="star"
-            height="24px"
             style={{ marginRight: "8px" }}
           />
           <StyledRatingColumn>
@@ -123,24 +193,22 @@ const RatingsBlock = () => {
         </StyledRatingContent>
       </StyledRatingBlock>
       <StyledRatingBlock>
-        <div>YOUR RATING</div>
+        <StyledRatingsHeader>YOUR RATING</StyledRatingsHeader>
         <StyledYourRatingContent onClick={toggleShowRating}>
           {showRating ? (
             <>
-              <img
+              <StyledStarIcon
                 src={star}
                 alt="star"
-                height="24px"
                 style={{ marginRight: "8px" }}
               />
               <StyledRating>10</StyledRating>
             </>
           ) : (
             <>
-              <img
+              <StyledStarIcon
                 src={starOutline}
                 alt="star outline"
-                height="24px"
                 style={{ marginRight: "8px" }}
               />
               <StyledRateText>Rate</StyledRateText>
@@ -149,12 +217,11 @@ const RatingsBlock = () => {
         </StyledYourRatingContent>
       </StyledRatingBlock>
       <StyledRatingBlock>
-        <div>POPULARITY</div>
+        <StyledRatingsHeader>POPULARITY</StyledRatingsHeader>
         <StyledTrendingContent>
-          <img
+          <StyledTrendingIcon
             src={trending}
             alt="star outline"
-            height="30px"
             style={{ marginRight: "7px" }}
           />
           <StyledRating>10</StyledRating>

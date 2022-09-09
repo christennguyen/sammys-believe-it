@@ -9,6 +9,10 @@ const StyledHeader = styled.div`
 const StyledTitle = styled.div`
   font-size: 32px;
   font-weight: bold;
+
+  @media only screen and (max-width: 860px) {
+    font-size: 24px;
+  }
 `;
 
 const StyledPill = styled.div`

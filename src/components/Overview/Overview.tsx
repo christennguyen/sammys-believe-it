@@ -13,6 +13,10 @@ const StyledContainer = styled.div`
 const StyledSubContainer = styled.div`
   width: 845px;
   padding: 20px 0 30px 0;
+
+  @media only screen and (max-width: 860px) {
+    width: calc(100vw - 48px);
+  }
 `;
 
 const StyledTitleContainer = styled.div``;
@@ -80,11 +84,29 @@ const StyledActors = styled.div`
 
 const StyledOverviewTextContainer = styled.div`
   width: 533px;
+
+  @media only screen and (max-width: 860px) {
+    width: 100%;
+  }
 `;
 
 const StyledStarsText = styled.div`
   font-weight: bold;
   margin-right: 12px;
+`;
+
+const StyledRatingsContainer = styled.div`
+  @media only screen and (max-width: 860px) {
+    display: none;
+  }
+`;
+
+const StyledMobileRatingsContainer = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 860px) {
+    display: block;
+  }
 `;
 const Overview = () => {
   return (
@@ -95,9 +117,14 @@ const Overview = () => {
             <StyledHeader>One Year</StyledHeader>
             <StyledMovieInfo>2022 &#8226; PG &#8226; 8760h 0m</StyledMovieInfo>
           </StyledTitleContainer>
-          <RatingsBlock />
+          <StyledRatingsContainer>
+            <RatingsBlock />
+          </StyledRatingsContainer>
         </StyledInfoBar>
         <MediaBlock />
+        <StyledMobileRatingsContainer>
+          <RatingsBlock />
+        </StyledMobileRatingsContainer>
         <StyledOverviewTextContainer>
           <StyledGenreContainer>
             <StyledGenrePill>Action</StyledGenrePill>

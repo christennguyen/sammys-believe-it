@@ -17,7 +17,7 @@ const StyledPhotoGallery = styled.div<{ activeIndex: number }>`
   display: flex;
   width: 100%;
   transition: transform 0.3s;
-  transform: translateX(-${(props) => props.activeIndex * 103}%);
+  transform: translateX(-${(props) => props.activeIndex * 174}px);
 `;
 
 const StyledPhoto = styled.img`
@@ -46,13 +46,13 @@ const StyledRow = styled.div`
   position: relative;
 `;
 
-const PHOTO_MAP = [photo1, photo2, photo3, photo4, photo5, photo6];
+const PHOTO_MAP = [photo6, photo5, photo4, photo3, photo2, photo1];
 
 const PhotoSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const displayNext = () => {
-    if (activeIndex === PHOTO_MAP.length / 3 - 1) {
+    if (activeIndex === PHOTO_MAP.length - 2) {
       setActiveIndex(0);
     } else {
       setActiveIndex(activeIndex + 1);
