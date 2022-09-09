@@ -31,6 +31,7 @@ const StyledSearchField = styled.input`
   width: 90%;
   padding: 6px;
   border-style: hidden;
+  -webkit-appearance: none;
 `;
 
 const StyledDivider = styled.div`
@@ -110,6 +111,7 @@ const StyledMobileSearchIcon = styled.div`
     display: block;
     margin-right: 16px;
     cursor: pointer;
+    margin-top: 4px;
   }
 `;
 

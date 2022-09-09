@@ -24,6 +24,10 @@ const StyledImagesContainer = styled.div`
 const StyledImageContainer = styled.div`
   margin-right: 4px;
 
+  img {
+    height: 329px;
+  }
+
   @media only screen and (max-width: 860px) {
     display: none;
   }
@@ -38,11 +42,16 @@ const StyledMovieContainer = styled.div`
   }
 
   @media only screen and (max-width: 860px) {
+    margin-right: 0px;
     width: 100%;
     img {
       width: 100%;
       height: auto;
     }
+  }
+
+  @media only screen and (max-width: 390px) {
+    width: calc(100vw);
   }
 `;
 
@@ -68,6 +77,7 @@ const StyledPlayButtonContainer = styled.div`
 
   img {
     height: 66px;
+    width: 66px;
     cursor: pointer;
   }
 
@@ -79,6 +89,7 @@ const StyledPlayButtonContainer = styled.div`
   @media only screen and (max-width: 450px) {
     img {
       height: 48px;
+      width: 48px;
     }
   }
 `;
@@ -112,6 +123,12 @@ const StyledPlayCaption = styled.div`
   }
 `;
 
+const StyledPosterMovieContainer = styled.div`
+  display: flex;
+  @media only screen and (max-width: 390px) {
+    justify-content: center;
+  }
+`;
 const MediaBlock = () => {
   const [showCaption, setShowCaption] = useState(false);
 
@@ -121,21 +138,24 @@ const MediaBlock = () => {
 
   return (
     <StyledImagesContainer>
-      <StyledImageContainer>
-        <img src={poster} alt="movie poster" height="329px" />
-      </StyledImageContainer>
-      <StyledMovieContainer>
-        <img src={osl} alt="outside lands" />
-        <StyledPlayButtonContainer onClick={toggleShowCaption}>
-          <img src={playIcon} alt="play button" />
-        </StyledPlayButtonContainer>
-        {showCaption && (
-          <StyledPlayCaption>Not an actual video, sorry.</StyledPlayCaption>
-        )}
-        <StyledDetailButtonContainer>
-          <img src={detailsIcons} alt="details button" />
-        </StyledDetailButtonContainer>
-      </StyledMovieContainer>
+      <StyledPosterMovieContainer>
+        <StyledImageContainer>
+          <img src={poster} alt="movie poster" />
+        </StyledImageContainer>
+        <StyledMovieContainer>
+          <img src={osl} alt="outside lands" />
+          <StyledPlayButtonContainer onClick={toggleShowCaption}>
+            <img src={playIcon} alt="play button" />
+          </StyledPlayButtonContainer>
+          {showCaption && (
+            <StyledPlayCaption>Not an actual video, sorry.</StyledPlayCaption>
+          )}
+          <StyledDetailButtonContainer>
+            <img src={detailsIcons} alt="details button" />
+          </StyledDetailButtonContainer>
+        </StyledMovieContainer>
+      </StyledPosterMovieContainer>
+
       <StyledPhotoCardContainer>
         <StyledTopPhotoCard>
           <PhotoCard icon={videoIcon} text="15 VIDEOS" />

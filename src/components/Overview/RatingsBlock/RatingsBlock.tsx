@@ -130,9 +130,10 @@ const StyledQuantity = styled.div`
   color: #c4c4c4;
   font-size: 12px;
   font-weight: normal;
+  display: flex;
 
   @media only screen and (max-width: 860px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
@@ -167,6 +168,14 @@ const StyledTrendingIcon = styled.img`
     height: 22px;
   }
 `;
+
+const StyledBullet = styled.div`
+  display: none;
+  @media only screen and (max-width: 860px) {
+    display: block;
+    margin: 0 4px;
+  }
+`;
 const RatingsBlock = () => {
   const [showRating, setShowRating] = useState(false);
 
@@ -188,7 +197,9 @@ const RatingsBlock = () => {
               <StyledRating>10</StyledRating>
               <StyledDivisor>/10</StyledDivisor>
             </StyledFraction>
-            <StyledQuantity>4.6M</StyledQuantity>
+            <StyledQuantity>
+              <StyledBullet>&#8226;</StyledBullet>4.6M
+            </StyledQuantity>
           </StyledRatingColumn>
         </StyledRatingContent>
       </StyledRatingBlock>

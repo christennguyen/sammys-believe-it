@@ -16,6 +16,10 @@ const StyledContent = styled.div`
   @media only screen and (max-width: 860px) {
     width: calc(100vw - 48px);
   }
+
+  @media only screen and (max-width: 390px) {
+    width: calc(100vw - 32px);
+  }
 `;
 
 const StyledSubContent = styled.div`

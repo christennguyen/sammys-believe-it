@@ -94,7 +94,7 @@ const ReviewsSection = () => {
   };
   return (
     <SectionCard>
-      <SectionHeader text="UserReviews" />
+      <SectionHeader text="User Reviews" />
       <StyledReview>
         <StyledHeader>
           <StyledFeatureText>FEATURED REVIEW</StyledFeatureText>

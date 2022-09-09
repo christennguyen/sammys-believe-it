@@ -24,7 +24,7 @@ const StyledContainer = styled.div`
   }
 
   @media only screen and (max-width: 390px) {
-    width: calc(50vw + 6px);
+    width: calc(50vw + 14px);
   }
 `;
 
