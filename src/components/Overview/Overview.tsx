@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import RatingsBlock from "./RatingsBlock/RatingsBlock";
 import MediaBlock from "./MediaBlock/MediaBlock";
+import poster from "../../images/poster.jpg";
 
 const StyledContainer = styled.div`
   background-color: #202020;
@@ -16,6 +17,10 @@ const StyledSubContainer = styled.div`
 
   @media only screen and (max-width: 860px) {
     width: calc(100vw - 48px);
+  }
+
+  @media only screen and (max-width: 390px) {
+    width: calc(100vw - 32px);
   }
 `;
 
@@ -53,7 +58,15 @@ const StyledGenrePill = styled.div`
 
 const StyledGenreContainer = styled.div`
   display: flex;
-  margin: 12px 0;
+  margin-bottom: 12px;
+
+  @media only screen and (max-width: 860px) {
+    flex-wrap: wrap;
+
+    * {
+      margin-top: 10px;
+    }
+  }
 `;
 const StyledInfoContainer = styled.div``;
 
@@ -108,6 +121,41 @@ const StyledMobileRatingsContainer = styled.div`
     display: block;
   }
 `;
+
+const StyledPosterGenreContainer = styled.div`
+  display: flex;
+
+  @media only screen and (max-width: 860px) {
+    margin-bottom: 12px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 12px 0 24px 0;
+  }
+`;
+
+const StyledPoster = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 860px) {
+    display: block;
+    margin-right: 16px;
+    img {
+      width: 230px;
+      height: auto;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    img {
+      width: calc(50vw - 100px);
+      height: auto;
+
+      min-width: 114px;
+    }
+  }
+`;
+
 const Overview = () => {
   return (
     <StyledContainer>
@@ -122,36 +170,42 @@ const Overview = () => {
           </StyledRatingsContainer>
         </StyledInfoBar>
         <MediaBlock />
-        <StyledMobileRatingsContainer>
-          <RatingsBlock />
-        </StyledMobileRatingsContainer>
         <StyledOverviewTextContainer>
-          <StyledGenreContainer>
-            <StyledGenrePill>Action</StyledGenrePill>
-            <StyledGenrePill>Comedy</StyledGenrePill>
-            <StyledGenrePill>Drama</StyledGenrePill>
-            <StyledGenrePill>Romance</StyledGenrePill>
-          </StyledGenreContainer>
-          <StyledInfoContainer>
+          <StyledPosterGenreContainer>
+            <StyledPoster>
+              <img src={poster} alt="movie poster" />
+            </StyledPoster>
             <div>
-              Two unlikely lovers meet by chance and learn what it means to
-              understand one another and themselves and ultimately find love.
-              <br />
-              <br />
-              Happy Anniversary, Sam! I've loved loving you this year and look
-              forward to all the adventures in <i>Two Years: The Sequel.</i>
+              <StyledGenreContainer>
+                <StyledGenrePill>Action</StyledGenrePill>
+                <StyledGenrePill>Comedy</StyledGenrePill>
+                <StyledGenrePill>Drama</StyledGenrePill>
+                <StyledGenrePill>Romance</StyledGenrePill>
+              </StyledGenreContainer>
+              <div>
+                Two unlikely lovers meet by chance and learn what it means to
+                understand one another and themselves and ultimately find love.
+                <br />
+                <br />
+                Happy Anniversary, Sam! I've loved loving you this year and look
+                forward to all the adventures in <i>Two Years: The Sequel.</i>
+              </div>
             </div>
-            <StyledDivider />
-            <div>
-              <StyledRow>
-                <StyledStarsText>Stars</StyledStarsText>
-                <StyledActors>
-                  <StyledActorLinks>Sam Mathison</StyledActorLinks> &#8226;{" "}
-                  <StyledActorLinks>Christen Nguyen</StyledActorLinks>
-                </StyledActors>
-              </StyledRow>
-            </div>
-          </StyledInfoContainer>
+          </StyledPosterGenreContainer>
+
+          <StyledMobileRatingsContainer>
+            <RatingsBlock />
+          </StyledMobileRatingsContainer>
+          <StyledDivider />
+          <div>
+            <StyledRow>
+              <StyledStarsText>Stars</StyledStarsText>
+              <StyledActors>
+                <StyledActorLinks>Sam Mathison</StyledActorLinks> &#8226;{" "}
+                <StyledActorLinks>Christen Nguyen</StyledActorLinks>
+              </StyledActors>
+            </StyledRow>
+          </div>
         </StyledOverviewTextContainer>
       </StyledSubContainer>
     </StyledContainer>
