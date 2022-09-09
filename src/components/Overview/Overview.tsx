@@ -136,23 +136,23 @@ const StyledPosterGenreContainer = styled.div`
 const StyledPoster = styled.div`
   display: none;
 
-  @media only screen and (max-width: 860px) {
-    display: block;
-    margin-right: 16px;
-    img {
-      width: 230px;
-      height: auto;
-    }
-  }
+  // @media only screen and (max-width: 860px) {
+  //   display: block;
+  //   margin-right: 16px;
+  //   img {
+  //     width: 230px;
+  //     height: auto;
+  //   }
+  // }
 
-  @media only screen and (max-width: 600px) {
-    img {
-      width: calc(50vw - 100px);
-      height: auto;
+  // @media only screen and (max-width: 600px) {
+  //   img {
+  //     width: calc(50vw - 100px);
+  //     height: auto;
 
-      min-width: 114px;
-    }
-  }
+  //     min-width: 114px;
+  //   }
+  // }
 `;
 
 const Overview = () => {
