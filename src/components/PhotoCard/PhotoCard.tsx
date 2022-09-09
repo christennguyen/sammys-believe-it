@@ -21,6 +21,8 @@ const StyledContainer = styled.div`
     flex-direction: row;
     height: 48px;
     width: calc(50vw - 26px);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 
   @media only screen and (max-width: 390px) {
