@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { SectionCard } from "../../styles";
 import starIcon from "../../images/icons/star.svg";
@@ -79,7 +80,18 @@ const StyledHelpfulContainer = styled.div`
   align-items: center;
   margin-top: 12px;
 `;
+
+const StyledThumbs = styled.img`
+  cursor: pointer;
+  height: 24px;
+  margin-right: 8px;
+`;
 const ReviewsSection = () => {
+  const [helpfulCounter, setHelpfulCounter] = useState(329);
+
+  const markHelpful = () => {
+    setHelpfulCounter(helpfulCounter + 1);
+  };
   return (
     <SectionCard>
       <SectionHeader text="UserReviews" />
@@ -108,21 +120,14 @@ const ReviewsSection = () => {
         meaningful dialog while being hilarious and light-hearted! Perfect film,
         no notes!
         <StyledHelpfulContainer>
-          <img
-            src={thumbsUpIcon}
-            alt="thumbs up"
-            style={{ marginRight: "8px" }}
-            height="24px"
-          />
+          <div onClick={markHelpful}>
+            <StyledThumbs src={thumbsUpIcon} alt="thumbs up" />
+          </div>
           <StyledRatingInfo>
-            <div>helpful</div> &#8226; <div>329</div>
+            <div onClick={markHelpful}>helpful</div> &#8226;{" "}
+            <div>{helpfulCounter}</div>
           </StyledRatingInfo>
-          <img
-            src={thumbsDownIcon}
-            alt="thumbs down"
-            style={{ marginRight: "8px" }}
-            height="24px"
-          />
+          <StyledThumbs src={thumbsDownIcon} alt="thumbs down" />
           <div>1</div>
         </StyledHelpfulContainer>
       </StyledReview>
