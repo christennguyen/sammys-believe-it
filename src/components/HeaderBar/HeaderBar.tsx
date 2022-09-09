@@ -2,6 +2,7 @@ import styled from "styled-components";
 import menu from "../../images/icons/menu.svg";
 import imdbLogo from "../../images/icons/imdb-logo.svg";
 import searchIcon from "../../images/icons/search.svg";
+import searchIconWhite from "../../images/icons/searchWhite.svg";
 import downIcon from "../../images/icons/downArrow.svg";
 
 const StyledHeader = styled.div`
@@ -13,6 +14,10 @@ const StyledHeaderContents = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: 860px) {
+    justify-content: flex-start;
+  }
 `;
 const StyledContainer = styled.div`
   width: 100%;
@@ -32,6 +37,10 @@ const StyledDivider = styled.div`
   border-right: 2px solid grey;
   border-radius: 4px;
   height: 34px;
+
+  @media only screen and (max-width: 860px) {
+    display: none;
+  }
 `;
 
 const StyledSearchDropdown = styled.div`
@@ -53,6 +62,10 @@ const StyledSearchContainer = styled.div`
   width: 100%;
   height: 31.25px;
   margin-right: 20px;
+
+  @media only screen and (max-width: 860px) {
+    display: none;
+  }
 `;
 
 const StyledsearchIcon = styled.div`
@@ -75,6 +88,11 @@ const StyledSignInText = styled.div`
 const StyledLogoSearchContainer = styled.div`
   display: flex;
   width: 84%;
+
+  @media only screen and (max-width: 860px) {
+    width: calc(100vw - 144px);
+    margin-left: 8px;
+  }
 `;
 
 const StyledLogo = styled.div`
@@ -84,6 +102,20 @@ const StyledLogo = styled.div`
 
 const StyledMenu = styled.div`
   cursor: pointer;
+`;
+
+const StyledMobileSearchIcon = styled.div`
+  display: none;
+  @media only screen and (max-width: 860px) {
+    display: block;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+`;
+
+const StyledSignInContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 const HeaderBar = () => {
@@ -114,7 +146,12 @@ const HeaderBar = () => {
             </StyledSearchContainer>
             <StyledDivider />
           </StyledLogoSearchContainer>
-          <StyledSignInText>Sign in</StyledSignInText>
+          <StyledSignInContainer>
+            <StyledMobileSearchIcon>
+              <img src={searchIconWhite} alt="search logo" height="24px" />
+            </StyledMobileSearchIcon>
+            <StyledSignInText>Sign in</StyledSignInText>
+          </StyledSignInContainer>
         </StyledHeaderContents>
       </StyledHeader>
     </StyledContainer>

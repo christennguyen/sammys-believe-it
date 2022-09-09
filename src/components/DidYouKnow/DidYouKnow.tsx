@@ -5,7 +5,7 @@ import TextCard from "../TextCard/TextCard";
 const data = [
   {
     title: "Trivia",
-    text: "Christen first saw Sam when she almost ran him over with her car.",
+    text: "Christen's first encounter with Sam was when she almost ran him over in a parking lot.",
   },
   {
     title: "Quote",

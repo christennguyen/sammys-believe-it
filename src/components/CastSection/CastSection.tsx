@@ -6,14 +6,20 @@ import samHeadShot from "../../images/sam.jpg";
 
 const StyledCastInfoContainer = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
+
+  @media only screen and (max-width: 860px) {
+    flex-direction: column;
+  }
 `;
 
-const StyledRow = styled.div`
+const StyledBlock = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+
+  @media only screen and (max-width: 860px) {
+    justify-content: flex-start;
+  }
 `;
 
 const StyledHeadshot = styled.img`
@@ -24,11 +30,21 @@ const StyledHeadshot = styled.img`
   :hover {
     filter: brightness(85%);
   }
+
+  @media only screen and (max-width: 860px) {
+    height: 159px;
+  }
 `;
 
 const StyledCastText = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 860px) {
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+  }
 `;
 
 const StyledActorName = styled.div`
@@ -67,14 +83,14 @@ const CastSection = () => {
   return (
     <SectionCard>
       <SectionHeader text="Top Cast" />
-      <StyledRow>
+      <StyledBlock>
         <CastInfo imageUrl={samHeadShot} name="Sam Mathison" role="Boyf" />
         <CastInfo
           imageUrl={christenHeadShot}
           name="Christen Nguyen"
           role="Girlf"
         />
-      </StyledRow>
+      </StyledBlock>
     </SectionCard>
   );
 };

@@ -16,6 +16,16 @@ const StyledContainer = styled.div`
   :hover {
     background-color: #484848;
   }
+
+  @media only screen and (max-width: 860px) {
+    flex-direction: row;
+    height: 48px;
+    width: calc(50vw - 26px);
+  }
+
+  @media only screen and (max-width: 390px) {
+    width: calc(50vw + 6px);
+  }
 `;
 
 interface IPhotoCard {
@@ -25,6 +35,18 @@ interface IPhotoCard {
 
 const StyledIconContainer = styled.div`
   margin-bottom: 4px;
+
+  img {
+    height: 32px;
+  }
+
+  @media only screen and (max-width: 860px) {
+    margin: 0 8px 0 0;
+
+    img {
+      height: 12px;
+    }
+  }
 `;
 
 const StyledText = styled.p`
@@ -36,7 +58,7 @@ const PhotoCard: React.FC<IPhotoCard> = ({ icon, text }) => {
   return (
     <StyledContainer>
       <StyledIconContainer>
-        <img src={icon} alt="icon" height="32px" />
+        <img src={icon} alt="icon" />
       </StyledIconContainer>
       <StyledText>{text}</StyledText>
     </StyledContainer>

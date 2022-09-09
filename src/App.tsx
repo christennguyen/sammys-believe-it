@@ -8,14 +8,23 @@ import CastSection from "./components/CastSection/CastSection";
 import StorylineSection from "./components/StorylineSection/StorylineSection";
 import AwardsCard from "./components/AwardsCard/AwardsCard";
 import DidYouKnow from "./components/DidYouKnow/DidYouKnow";
+import ReviewsSection from "./components/ReviewsSection/ReviewsSection";
 
 const StyledContent = styled.div`
   width: 845px;
+
+  @media only screen and (max-width: 860px) {
+    width: calc(100vw - 48px);
+  }
 `;
 
 const StyledSubContent = styled.div`
   width: 60%;
   margin-top: 20px;
+
+  @media only screen and (max-width: 860px) {
+    width: 100%;
+  }
 `;
 const StyledMainSection = styled.div`
   width: 100%;
@@ -25,6 +34,10 @@ const StyledMainSection = styled.div`
 
 const StyledMain = styled.div`
   position: relative;
+
+  @media only screen and (max-width: 860px) {
+    overflow-x: hidden;
+  }
 `;
 
 function App() {
@@ -41,6 +54,7 @@ function App() {
               <CastSection />
               <StorylineSection />
               <DidYouKnow />
+              <ReviewsSection />
             </StyledSubContent>
           </StyledContent>
         </StyledMainSection>
